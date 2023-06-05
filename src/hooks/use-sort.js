@@ -4,7 +4,7 @@ function useSort(data, config) {
   const [sortOrder, setSortOrder] = useState(null);
   const [sortBy, setSortBy] = useState(null);
 
-  const setSortColumn = (label) => {
+  const setSortColumn = label => {
     if (sortBy && label !== sortBy) {
       setSortOrder('asc');
       setSortBy(label);
@@ -28,7 +28,7 @@ function useSort(data, config) {
   // Find the correct sortValue function and use it for sorting
   let sortedData = data;
   if (sortOrder && sortBy) {
-    const { sortValue } = config.find((column) => column.label === sortBy);
+    const { sortValue } = config.find(column => column.label === sortBy);
     sortedData = [...data].sort((a, b) => {
       const valueA = sortValue(a);
       const valueB = sortValue(b);

@@ -6,10 +6,10 @@ function SortableTable(props) {
   const { config, data } = props;
   const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(
     data,
-    config
+    config,
   );
 
-  const updatedConfig = config.map((column) => {
+  const updatedConfig = config.map(column => {
     if (!column.sortValue) {
       return column;
     }

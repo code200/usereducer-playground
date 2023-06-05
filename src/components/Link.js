@@ -7,10 +7,10 @@ function Link({ to, children, className, activeClassName }) {
   const classes = classNames(
     'text-blue-500',
     className,
-    currentPath === to && activeClassName
+    currentPath === to && activeClassName,
   );
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     if (event.metaKey || event.ctrlKey) {
       return;
     }

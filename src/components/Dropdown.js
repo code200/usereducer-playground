@@ -7,7 +7,7 @@ function Dropdown({ options, value, onChange }) {
   const divEl = useRef();
 
   useEffect(() => {
-    const handler = (event) => {
+    const handler = event => {
       if (!divEl.current) {
         return;
       }
@@ -28,12 +28,12 @@ function Dropdown({ options, value, onChange }) {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = option => {
     setIsOpen(false);
     onChange(option);
   };
 
-  const renderedOptions = options.map((option) => {
+  const renderedOptions = options.map(option => {
     return (
       <div
         className="hover:bg-sky-100 rounded cursor-pointer p-1"

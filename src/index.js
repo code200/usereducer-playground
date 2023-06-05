@@ -10,5 +10,5 @@ const root = ReactDOM.createRoot(el);
 root.render(
   <NavigationProvider>
     <App />
-  </NavigationProvider>
+  </NavigationProvider>,
 );

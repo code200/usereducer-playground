@@ -4,7 +4,7 @@ import Dropdown from '../components/Dropdown';
 function DropdownPage() {
   const [selection, setSelection] = useState(null);
 
-  const handleSelect = (option) => {
+  const handleSelect = option => {
     setSelection(option);
   };
 
